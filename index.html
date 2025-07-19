@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izzy's Sneakers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><li><a href="index.html">sneakers</a></li></div>
+            <ul>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart-icon">
+                <img src="images/icon-cart.svg" alt="Cart">
+                <span id="cart-count">0</span>
+                <img class="avatar" src="images/image-avatar.png" alt="User">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-container">
+            <div class="image-section">
+                <img src="images/image-product-1.jpg" alt="Sneakers" class="main-image">
+                <div class="thumbnail-container">
+                    <img src="images/image-product-1.jpg" alt="Thumbnail 1">
+                    <img src="images/image-product-2.jpg" alt="Thumbnail 2">
+                    <img src="images/image-product-3.jpg" alt="Thumbnail 3">
+                    <img src="images/image-product-4.jpg" alt="Thumbnail 4">
+                </div>
+                <div id="lightbox-modal" class="lightbox-modal">
+                    <span class="close">&times;</span>
+                    <img class="lightbox-content" id="expandedImg">
+                    <div class="lightbox-controls">
+                        <span class="prev">&#10094;</span>
+                        <span class="next">&#10095;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="details-section">
+                <h4>SNEAKER COMPANY</h4>
+                <h1>Fall Limited Edition Sneakers</h1>
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+                <div class="price-section">
+                    <div class="first-price">
+                        <span class="current-price">$125.00</span>
+                        <div class="discount-container">
+                            <span class="discount">50%</span>
+                        </div>
+                    </div> <br> 
+                    <span class="original-price">$250.00</span>
+                </div>
+                <div class="purchase-section">
+                    <div class="quantity-container">
+                        <button id="decrease">-</button>
+                        <span id="quantity">0</span>
+                        <button id="increase">+</button>
+                    </div>
+                    <button id="add-to-cart" class="add-button">
+                        <img class="cart-button" src="images/icon-cart.svg" alt="cart">
+                        <p>Add to cart</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

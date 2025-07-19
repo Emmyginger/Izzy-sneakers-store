@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: kumbh Sans;
+}
+
+header {
+    background: #fff;
+    padding: 1em 4.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo{
+    list-style: none;
+}
+
+nav .logo li{
+    font-size: x-large;
+}
+nav .logo a{
+    font-weight: 800;
+    color: #000;
+    text-decoration: none;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 200;
+}
+nav ul a:hover{
+    text-decoration: underline;
+}
+
+.cart-icon img {
+    width: 24px;
+    margin-left: 1em;
+}
+.cart-icon .avatar{
+    width: 50px;
+}
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#cart-count {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    background-color: #ff4500;
+    color: white;
+    border-radius: 50%;
+    padding: 0.1em 0.3em;
+    font-size: 12px;
+    height: 15px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 4em 7em;
+}
+
+.product-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.main-image {
+    width: 90%;
+    border-radius: 12px;
+    height: 400px;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 3em;
+    margin-top: 1em;
+}
+
+.thumbnail-container img {
+    width: 70px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.details-section {
+    flex: 1;
+}
+.details-section h4{
+    font-weight: 300;
+    color: #777;
+}
+.details-section p{
+    color: #777;
+}
+
+.price-section {
+    align-items: center;
+    margin-top: 30px;
+}
+
+.first-price{
+    display: flex;
+    align-items: center;
+}
+.first-price .discount-container{
+    background-color: #000;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.current-price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.discount {
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.price-section .original-price {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.purchase-section {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 40px;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.quantity-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: #ff4500;
+}
+.quantity-container button:hover{
+    background-color: #ff4500;
+    color: #fff;
+}
+.add-button {
+    background-color: #ff4500;
+    color: #000;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 170px;
+    display: flex;
+    justify-content: space-around;
+}
+.add-button p{
+    color: #000;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.add-button img{
+    height: 15px;
+    margin-left: 20px;
+}
+.add-button:hover {
+    background-color: #e03e00;
+}
+
+.lightbox-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lightbox-controls .prev,
+.lightbox-controls .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+}
+
+.lightbox-controls .next {
+    right: 250px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+
+}
+
+.lightbox-controls .prev {
+    left: 250px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+}

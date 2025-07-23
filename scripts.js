@@ -71,3 +71,42 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+const cartIcon = document.querySelector(".cart-icon img");
+const cartModal = document.getElementById("cart-modal");
+const cartCloseBtn = document.querySelector(".cart-close");
+const cartQuantitySpan = document.getElementById("cart-quantity");
+const cartTotalSpan = document.getElementById("cart-total");
+const clearCartBtn = document.getElementById("clear-cart");
+const checkoutBtn = document.getElementById("checkout");
+
+cartIcon.addEventListener('click', function() {
+    cartModal.style.display = "flex";
+    updateCartModal();
+});
+
+cartCloseBtn.onclick = function() {
+    cartModal.style.display = "none";
+}
+
+clearCartBtn.onclick = function() {
+    cartCount = 0;
+    updateCartCount();
+    updateCartModal();
+}
+
+checkoutBtn.onclick = function() {
+    alert("Proceeding to checkout!");
+    cartModal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == cartModal) {
+        cartModal.style.display = "none";
+    }
+}
+
+function updateCartModal() {
+    cartQuantitySpan.textContent = cartCount;
+    cartTotalSpan.textContent = (cartCount * 125).toFixed(2); // assuming each shoe costs $125
+}
